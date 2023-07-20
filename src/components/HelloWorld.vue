@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1>0q</h1>
+    <h1>01</h1>
     <div>{{data}}</div>
     <div id="message"></div>
     <button @click="getData">取得資料</button>
@@ -27,7 +27,7 @@ export default {
       window.addEventListener('message', function (e) {
         this.data = e.data;
         // window.document.getElementById('message').innerHTML = e.data.name;
-        console.log(e.data,777);
+       alert(e.data,777,this.data);
 
       }, false)
     }

@@ -8,22 +8,13 @@
 export default {
   mounted () {
     window.onload = () => {
-      // 子页面接收消息
       window.addEventListener('message', function (e) {
 
-        window.document.getElementById('message').innerHTML = e.data.name
+        window.document.getElementById('message').innerHTML = e.data.name;
+        console.log(88888);
         
       }, false)
     }
   },
-  methods: {
-    // 子页面发送消息
-    sendToParent () {
-      window.parent.postMessage({
-        msg: 'hideselfService',
-        key: '123456'
-      }, '*')
-    }
-  }
 }
 </script>

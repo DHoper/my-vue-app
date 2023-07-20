@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <h1>A</h1>
     <div>{{data}}</div>
     <div id="message"></div>
     <button @click="getData">取得資料</button>

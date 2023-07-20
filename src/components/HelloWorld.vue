@@ -23,7 +23,7 @@ export default {
   //   }
   // },
   mounted() {
-    alert(e.data,777,this.data);
+    alert(777,this.data);
     window.onload = () => {
       window.addEventListener('message', function (e) {
         this.data = e.data;

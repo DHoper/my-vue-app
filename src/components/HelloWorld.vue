@@ -23,15 +23,14 @@ export default {
   //   }
   // },
   mounted() {
-    alert(777,this.data);
-    window.onload = () => {
+    // alert(777,this.data);
       window.addEventListener('message', function (e) {
         this.data = e.data;
         // window.document.getElementById('message').innerHTML = e.data.name;
        alert(e.data,777,this.data);
 
       }, false)
-    }
+    
   },
 }
 </script>

@@ -26,8 +26,9 @@ export default {
     // alert(777,this.data);
       window.addEventListener('message', function (e) {
         this.data = e.data;
+        a = JSON.stringify(e.data);
         // window.document.getElementById('message').innerHTML = e.data.name;
-       alert(e.data,777,this.data);
+       alert(777,a);
 
       }, false)
     

@@ -15,7 +15,6 @@ export default {
   },
   methods: {
     getData() {
-      throw new ErrorEvent("123");
       window.addEventListener('message', function (e) {
         console.log(e.data,777);
         this.data = e.data;

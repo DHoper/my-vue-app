@@ -26,11 +26,8 @@ export default {
     // alert(777,this.data);
       window.addEventListener('message', function (e) {
         this.data = e.data.title;
-        // let a = JSON.stringify(e.data);
         console.log(e.data, this.data, 755);
         window.document.getElementById('message').innerHTML = this.data;
-        alert(777,a);
-
       }, false)
     
   },

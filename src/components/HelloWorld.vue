@@ -16,7 +16,7 @@ export default {
       window.addEventListener('message', function (e) {
         this.getData = e.data;
         // window.document.getElementById('message').innerHTML = e.data.name;
-        console.log(e.data);
+        console.log(e.data,777);
 
       }, false)
     }

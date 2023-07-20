@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1>B</h1>
+    <h1>0</h1>
     <div>{{data}}</div>
     <div id="message"></div>
     <button @click="getData">取得資料</button>
@@ -18,7 +18,7 @@ export default {
       window.addEventListener('message', function (e) {
         console.log(e.data,777);
         this.data = e.data;
-        window.document.getElementById('message').innerHTML = e.data;
+        document.getElementById('message').innerHTML = e.data;
       }, false)
     }
   },

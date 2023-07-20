@@ -27,7 +27,8 @@ export default {
       window.addEventListener('message', function (e) {
         this.data = e.data;
         let a = JSON.stringify(e.data);
-        // window.document.getElementById('message').innerHTML = e.data.name;
+        console.log(e.data, 755);
+        window.document.getElementById('message').innerHTML = e.data;
        alert(777,a);
 
       }, false)

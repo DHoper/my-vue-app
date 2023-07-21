@@ -2,7 +2,7 @@
   <div class="container">
     <h1>0w</h1>
     <ul>
-      <li v-for="(user, index) in users" :key="user.id">
+      <li v-for="(user, index) in data" :key="user.id">
         <div>Custom ID: {{ user.custom_id }}</div>
         <div>Name: {{ user.name }}</div>
         <div>Email: {{ user.email }}</div>
@@ -10,7 +10,6 @@
         <div>Status: {{ user.status }}</div>
       </li>
     </ul>
-    <div>{{data}}</div>
     <div id="message"></div>
     <button @click="getData">取得資料</button>
   </div>

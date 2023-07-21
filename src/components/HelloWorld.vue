@@ -16,7 +16,7 @@
 export default {
   data() {
     return {
-      data:{}
+      data: {}
     }
   },
   // methods: {
@@ -30,11 +30,38 @@ export default {
   // },
   mounted() {
     // alert(777,this.data);
-      window.addEventListener('message', function (e) {
-        data = e.data;
-        console.log("資料成功接收", data);
-      }, false)
-    
+    window.addEventListener('message', function (e) {
+      data = e.data;
+      console.log("資料成功接收", data);
+    }, false)
+
   },
 }
 </script>
+
+<style>
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px;
+  margin-bottom: 8px;
+}
+
+li:hover {
+  background-color: #f2f2f2;
+}
+
+div {
+  margin-bottom: 4px;
+}
+
+div:last-child {
+  margin-bottom: 0;
+}
+</style>

@@ -1,6 +1,15 @@
 <template>
   <div class="container">
     <h1>0w</h1>
+    <ul>
+      <li v-for="(user, index) in users" :key="user.id">
+        <div>Custom ID: {{ user.custom_id }}</div>
+        <div>Name: {{ user.name }}</div>
+        <div>Email: {{ user.email }}</div>
+        <div>Mobile: {{ user.mobile }}</div>
+        <div>Status: {{ user.status }}</div>
+      </li>
+    </ul>
     <div>{{data}}</div>
     <div id="message"></div>
     <button @click="getData">取得資料</button>
@@ -10,7 +19,7 @@
 export default {
   data() {
     return {
-      data: ""
+      data:{}
     }
   },
   // methods: {
@@ -25,9 +34,9 @@ export default {
   mounted() {
     // alert(777,this.data);
       window.addEventListener('message', function (e) {
-        this.data = e.data.title;
-        console.log(e.data, this.data, 755);
-        window.document.getElementById('message').innerHTML = this.data;
+        this.data = e.data;
+        console.log(this.data, 755);
+        // window.document.getElementById('message').innerHTML = this.data;
       }, false)
     
   },

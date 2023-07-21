@@ -10,8 +10,6 @@
         <div>Status: {{ user.status }}</div>
       </li>
     </ul>
-    <div id="message"></div>
-    <button @click="getData">取得資料</button>
   </div>
 </template>
 <script>
@@ -33,9 +31,8 @@ export default {
   mounted() {
     // alert(777,this.data);
       window.addEventListener('message', function (e) {
-        this.data = e.data;
-        console.log(this.data, 755);
-        // window.document.getElementById('message').innerHTML = this.data;
+        data = e.data;
+        console.log("資料成功接收", data);
       }, false)
     
   },

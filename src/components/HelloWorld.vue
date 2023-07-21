@@ -31,8 +31,9 @@ export default {
   mounted() {
     // alert(777,this.data);
     window.addEventListener('message', function (e) {
-      data = e.data;
-      console.log("資料成功接收", data);
+      console.log(this.data);
+      this.data = e.data;
+      console.log("資料成功接收", this.data);
     }, false)
 
   },
